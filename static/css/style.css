@@ -1,0 +1,41 @@
+._failed{ border-bottom: solid 4px red !important; }
+    ._failed i{  color:red !important;  }
+
+    ._success {
+        box-shadow: 0 15px 25px #00000019;
+        padding: 45px;
+        width: 100%;
+        text-align: center;
+        margin: 40px auto;
+        border-bottom: solid 4px blue;
+    }
+
+    ._success i {
+        font-size: 55px;
+        color: blue;
+    }
+
+    ._success h2 {
+        margin-bottom: 12px;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-top: 10px;
+    }
+
+    ._success p {
+        margin-bottom: 0px;
+        font-size: 18px;
+        color: #495057;
+        font-weight: 500;
+    }
+/* .gradient-custom {
+    fallback for old browsers
+    background: #cd9cf2;
+    
+    Chrome 10-25, Safari 5.1-6
+    background: -webkit-linear-gradient(to top left, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1));
+    
+    W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+    background: linear-gradient(to top left, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1))
+    } */
